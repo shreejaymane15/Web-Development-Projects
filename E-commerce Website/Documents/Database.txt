@@ -1,0 +1,61 @@
+Database Name - Ecommerce
+
+
+1. Products
+
+	- id
+	- name
+	- image
+	- description
+	- price
+	- discount
+	- stock
+	- status
+
+2. Users
+
+	- id
+	- name
+	- email
+	- password
+	- mobile
+	- status
+	- token
+
+3. Orders
+	- id
+	- total
+	- product_count
+	- placed_date
+	- delivery_date
+	- status	
+	- user_id (fk)
+
+4. Cart
+	
+	- id
+	- product_id (fk)
+	- cart_total
+	- user_id (fk)
+	
+5. Wishlist
+
+	- id
+	- product_id (fk)
+	- user_id (fk)
+
+6. Addresses
+	
+	- id
+	- city
+	- state
+	- contry
+	- address
+	- pin_code
+	- user_id (fk)
+
+7. Order Items
+
+	- id
+	- product_id (fk)
+	- order_id (fk)
