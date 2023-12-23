@@ -1,4 +1,4 @@
-Database Name - Ecommerce
+Database Name - E-Commerce
 
 
 1. Products
