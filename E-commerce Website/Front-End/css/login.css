@@ -2,7 +2,7 @@
     border: 2px solid black;
     justify-content: center;
     align-items: center;
-    display: flex;
+    /* display: flex; */
     width: 25%;   
     padding: 2%;
     background-color:azure;
@@ -27,4 +27,39 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
     font-weight: bolder;
+}
+
+.page-container .login-box #email-error{
+    color: red;
+}
+
+.page-container .login-box #password-error{
+    color: red;
+}
+
+
+.page-container .login-box #submit-error{
+    color: red;
+    text-align: center;
+}
+
+
+.valid {
+    color: green;
+}
+  
+.valid:before {
+    /* position: relative; */
+    left: -35px;
+    content: "✔";
+}
+
+.invalid {
+    color: red; 
+}
+
+.invalid:before {
+    /* position: relative; */
+    left: -35px;
+    content: "✖";
 }
