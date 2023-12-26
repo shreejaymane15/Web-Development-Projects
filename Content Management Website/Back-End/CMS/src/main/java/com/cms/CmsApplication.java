@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.cms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ECommereceApplication {
+public class CmsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ECommereceApplication.class, args);
+		SpringApplication.run(CmsApplication.class, args);
 	}
 
 }
