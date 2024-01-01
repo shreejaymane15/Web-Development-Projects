@@ -1,45 +1,61 @@
 .background{
     margin: 0;
     padding: 0;
-    background-image: url('../assets/images/background.png');
+    background-image: url('../assets/images/retrosupply-jLwVAUtLOAQ-unsplash.jpg');
     height: 100vh;
     background-size: cover;
     background-position: top;
+    /* background-color: white; */
 }
 
 .background .nav-options{
    display: flex;
    justify-content: right;
-   gap: 2rem;
-   padding: 2rem 3rem; 
+   gap: 1rem;
+   padding: 2rem 1rem; 
 }
 
 .background .nav-options .btn{
     cursor: pointer;
-    box-shadow: 0 0 0.3rem 0.2rem rgb(229, 202, 30);
+    /* box-shadow: 0 0 0.3rem 0.2rem rgb(0, 0, 255); */
+    transition: 0.3s;
+    font-size: large;
 }
 
+.background .nav-options .btn:hover{
+    transform: scale(0.9);
+}
 
 .center-content{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70vw;
-    height: 75vh;
+    /* width: 70vw; */
+    height: 100vh;
     color: aliceblue;
 }
+
 
 
 .center-content .content-header h1{
     font-size: 3rem;
     text-shadow: 0.2rem 0.2rem 0.3rem blue;
+    text-align: center;
 }
 
 .center-content .content-header p{
     font-size: 2rem;
     font-weight: 600;
     text-shadow: 0.2rem 0.2rem 0.3rem blue;
+    text-align: center;
 }
+
+
+.center-content .content-header .blog-button{
+    display: flex;
+    justify-content: center;
+}
+
 
 .center-content .content-header button{
     transition: 0.3s;
@@ -52,30 +68,35 @@
 
 
 .blogs-section{
-    background-image: linear-gradient(rgba(14, 33, 101, 0.7), rgba(14, 33, 101, 0.7)), url('../assets/images/background.jpg');
+    /* background-image: linear-gradient(rgba(14, 33, 101, 0.7), rgba(14, 33, 101, 0.7)), url('../assets/images/background.jpg'); */
+    /* background-image: url('../assets/images/Most\ Read.jpg'); */
+    background-color: #00203FFF;
     background-size: cover;
     background-position: center;
+    margin: 2rem;
 }
 
 
-.blogs-section .heading{
-    color: aliceblue;
-    text-shadow: 0.2rem 0.2rem 0.4rem rgb(27,227,204);
+.heading{
+    /* color: aliceblue; */
+    /* text-shadow: 0.2rem 0.2rem 0.4rem rgb(27,227,204); */
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
+    /* padding-bottom: 2rem; */
 }
 
-.blogs-section .heading h1{
-    text-decoration: dotted;
+.heading h1{
+    /* text-decoration: dotted; */
+    font-size: 3rem;
 }
 
 .blogs-section .top-blogs{
     padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 10rem;
 }
 
 .blogs-section .top-blogs .blog{
@@ -84,9 +105,10 @@
     width: 20%;
     border: 1px solid white;
     border-radius: 1rem;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #ADEFD1FF;
+    /* background-color: rgba(0, 0, 0, 0.3); */
     backdrop-filter: blur(0.4rem);
-    color: white;
+    color: black;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -99,6 +121,8 @@
 
 .blogs-section .top-blogs .blog img{
     border-radius: 1rem 1rem 0 0;
+    width: 39.7vh;
+    height: 35vh;
 }
 
 .blogs-section .top-blogs .blog h3{
@@ -134,8 +158,8 @@
 
 .about .one{
     width: 25%;
-    background-color:#9AD0c2;
-    color: #265d73;
+    /* background-color:#9AD0c2; */
+    /* color: #265d73; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,35 +172,39 @@
 
 .about .two{
     width: 75%;
-    background-color:#265d73;
-    color: #9AD0c2;
+    background-color:#9AD0c2;
+    /* color: #9AD0c2; */
     display: flex;
     justify-content: center;
-    padding: 2rem 2rem ;
+    padding: 5rem 5rem ;
 }
 
 .about .two .person{
     display: flex;
+    justify-content: center;
+    gap: 8rem;
 }
 
 .about .two .person .person-info{
-    padding-left: 2rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* justify-content: right; */
+    align-items: center;
+    font-size: larger;
 }
-
 
 .about .two .person img{
     height: 8rem;
     width: 8rem;
     border-radius: 50%;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
 }
 
 
 .footer{
-    background-color: lightgrey
+    /* background-color: lightgrey; */
+    background-image: url('../assets/images/cover.jpg');
+    background-size: cover;
+    color: white;
 }
 
 .footer .footer-container{
@@ -222,7 +250,8 @@
 .footer .footer-container .box .links{
     display: block;
     font-size: 1rem;
-    color: black;
+    /* color: black; */
+    color: white;
     padding: 0.4rem 0;
     text-decoration: none;
     cursor: pointer;
