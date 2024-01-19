@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(../assets/images/cover.jpg);
+    /* background-image: url(../assets/images/cover.jpg); */
     height: 100vh;
     /* background-size: cover; */
     /* background-position: center; */
@@ -17,15 +17,15 @@ body{
     border: 2px solid black;
     border-radius: 2rem;
     padding: 2rem;
-    box-shadow: 0.4rem 0.4rem 0.8rem rgb(27, 227, 204);
-    color: white;
+    /* box-shadow: 0.4rem 0.4rem 0.8rem rgb(27, 227, 204); */
+    /* color: white; */
 }
 
 .login-card h1{
     text-align: center;
-    /* color: black; */
-    color: white;
-    text-shadow: 0.2rem 0.2rem 0.4rem rgb(27, 227, 204);
+    color: black;
+    /* color: white; */
+    /* text-shadow: 0.2rem 0.2rem 0.4rem rgb(27, 227, 204); */
     margin-bottom: 2rem;
 }
 
@@ -45,13 +45,15 @@ body{
     border: none;
     background: transparent;
     /* color: black; */
-    color: white;
+    /* color: white; */
     font-size: 1.3rem;
     font-weight: 600;
 }
 
 .login-card .box .input-box::placeholder{
-    color: rgba(255, 255, 255, 0.5);
+    /* color: rgba(255, 255, 255, 0.5);
+     */
+     color: grey;
 }
 
 
@@ -69,11 +71,11 @@ body{
 }
 
 .login-card .check input:checked{
-    accent-color: white;
+    /* accent-color: white; */
 }
 
 .login-card .check span{
-    color: white;
+    /* color: white; */
     font-weight: 600;
 }
 
@@ -100,12 +102,13 @@ body{
 }
 
 .login-card .register-link a{
-    color: white;
+    /* color: white; */
     font-weight: 600;
     text-decoration: none;
     border-bottom: 0.05rem solid rgb(27, 227, 204);
     transition:  0.3s;
     cursor: pointer;
+    color: black;
 }
 
 
@@ -126,7 +129,7 @@ body{
 
 
 .modal .modal-dialog .modal-content .modal-header h1{
-    color: white;
+    /* color: white; */
 }
 
 .modal .modal-dialog .modal-content .modal-body{
@@ -135,7 +138,7 @@ body{
 }
 
 .modal .modal-dialog .modal-content .modal-header{
-    color: white;
+    /* color: white; */
 }
 
 .modal .modal-dialog .modal-content .modal-footer{
@@ -150,7 +153,7 @@ body{
     right: 2rem;
     padding: 1rem;
     background-color: #4caf50;
-    color: white;
+    /* color: white; */
     border-radius: 0.5rem;
     display: none;
 }

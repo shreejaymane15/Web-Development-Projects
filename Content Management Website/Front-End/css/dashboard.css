@@ -28,16 +28,12 @@ body {
 		z-index: 10;
     }
 }
-/* .sidebar header{
-	display: flex;
 
-
-} */
 .sidebar{
 	height: 100%;
 	background-color: #333;
 	position: fixed;
-	width: 20%;
+	width: 15%;
 	@media (max-width: 600px) {
 		position: relative;
 		width: 100%;
@@ -45,9 +41,64 @@ body {
     }
 }
 
+.sidebar header{
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar header h3{
+	display: flex;
+	margin-left: 2rem;
+	margin-top: 2rem;
+}
+
+.sidebar header hr{
+	color: white;
+	width: 90%;
+}
+
+.sidebar header nav ul li{
+	display: flex;
+	margin-top: 2rem;
+	width: 28vh;
+	height: 2.5rem;
+	justify-content: left;
+	align-items: center;
+	background-color: whitesmoke;
+	color: black;
+	border-radius: 5px;
+	padding-left: 0.5rem;
+}
+
+
+.sidebar header nav ul li a{
+	color: black;
+}
+
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	/* display: inline; */
+	/* margin: 2rem; */
+	margin-left: 0.5rem;
+	margin-right: 10px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	margin-left: 0.5rem;
+}
+
+
 .body{
 	/* height: 100vh; */
-	padding-left: 20%;
+	padding-left: 15%;
 	display: flex;
     flex-direction: column;
 	justify-content: space-between;
@@ -55,6 +106,61 @@ body {
 		padding-left: 0%;
     }
 }
+
+.top-content{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.5%;
+	align-items: center;
+}
+
+.top-content .search{
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+	margin-left: 30%;
+	margin-top: 0px;
+}
+
+.top-content .search input{
+	width: 30rem;
+	height: 2.5rem;
+	border-radius: 25px;
+	padding-left: 15px;
+	padding-right: 12%;
+	margin-top: 0px;
+}
+
+.top-content .search .search-icon{
+	position: absolute;
+	margin-left: 28rem;
+}
+
+.top-content .search .search-icon i{
+	cursor: pointer;
+}
+
+.user_image{
+	display: flex;
+	justify-content:end;
+	align-items: center;
+	margin-right: 0.5rem;
+}
+
+.user_image img{
+	border-radius: 50%;
+	height: 80px;
+	width: 80px;
+	margin-top: 0px;
+}
+
+.user_image h4{
+	margin-right: 0.5rem;
+	margin-top: 0px;
+	margin-left: 0.5rem;
+}
+
+
 
 header {
 	color: white;
@@ -67,23 +173,6 @@ header h1 {
 	margin: 0;
 }
 
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-nav li {
-	/* display: inline; */
-	margin: 2rem;
-	margin-right: 10px;
-}
-
-nav a {
-	color: white;
-	text-decoration: none;
-}
-
 main {
 	display: flex;
 	flex-wrap: wrap;
@@ -91,9 +180,139 @@ main {
 	padding: 20px;
 }
 
+
 section {
-	flex-basis: 40%;
-	margin-bottom: 20px;
+	/* flex-basis: 48%; */
+	margin: 10px;
+}
+
+.body .trending .trending-div{
+	display: flex;
+
+}
+
+.body .trending .trending-content{
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+	height: 40vh;
+	width: 55vh;
+}
+
+
+.body .trending .trending-div .trending-image img{
+	height: 40vh;
+	width: 55vh;
+}
+
+.read-now-button{
+	border: solid 1px;
+	border-radius: 25px;
+	padding: 0.5rem 2rem 0.5rem 2rem;
+	transition: 0.3s;
+	width: 11vh;
+}
+
+.read-now-button a{
+	text-decoration: none;
+}
+
+.read-now-button a:hover{
+	/* text-decoration: none; */
+	color: white;
+}
+
+
+
+.read-now-button:hover{
+	transform: scale(0.9);
+	background-color: black;
+}
+
+.second-partition{
+	display: flex;
+	flex-direction: column;
+	position:absolute;
+	margin-left: 58%;
+	margin-top: 1%;
+	gap: 1rem;
+}
+
+.recommendations{
+	border: solid black 1px;
+	width: 50vh;
+	padding: 1rem;
+	height: 35vh;
+	border-radius: 20px;
+	margin: 0px;
+}
+
+.recommendations hr{
+	margin: 0;
+}
+
+.recommendations .rec-heading{
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+}
+
+
+.recommendations .rec-heading h2{
+	margin: 0;
+	margin-bottom: 0.5rem;
+}
+
+.recommendations .rec-view{
+	font-size: small;
+	text-decoration: none;
+	margin-top: 0px;
+	padding-left: 2rem;
+}
+
+.recommendations .rec-user{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+
+.recommendations .rec-user img{
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+}
+
+.recommendations .rec-user h3{
+	justify-content: center;
+	align-items: center;
+	padding-left: 0.5rem;
+}
+
+
+.recommendations .rec-user a{
+	border: solid 1px;
+	text-decoration: none;
+	border-radius: 25px;
+	padding: 0.5rem 2rem 0.5rem 2rem;
+	transition: 0.3s;
+}
+
+.recommendations .rec-user a:hover{
+	background-color: black;
+	color: white;
+	transform: scale(0.9);
+}
+
+.suggestions .suggestions-articles{
+	display: flex;
+	height: 50vh;
+	width: 80vh;
+	gap: 3rem;
+}
+
+.suggestions .suggestions-articles img{
+	height: 20vh;
+	width: 30vh
 }
 
 section h2 {
