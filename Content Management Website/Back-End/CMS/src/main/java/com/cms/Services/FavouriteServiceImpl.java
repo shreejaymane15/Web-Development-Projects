@@ -15,8 +15,8 @@ import com.cms.Models.User;
 @Service
 public class FavouriteServiceImpl implements FavouriteService {
 	
-	@Autowired
-	private ModelMapper mapper;
+//	@Autowired
+//	private ModelMapper mapper;
 	
 	@Autowired
 	private BlogDao bdao;
@@ -35,12 +35,12 @@ public class FavouriteServiceImpl implements FavouriteService {
 		
 		if(blog != null && user != null) {
 			try {
-				Favourite favourite = mapper.map(fav, Favourite.class);
-				
-				favourite.setBlog(blog);
-				favourite.setUser(user);
-				
-				fdao.save(favourite);
+//				Favourite favourite = mapper.map(fav, Favourite.class);
+//				
+//				favourite.setBlog(blog);
+//				favourite.setUser(user);
+//				
+//				fdao.save(favourite);
 				return "Post Liked";
 				
 				

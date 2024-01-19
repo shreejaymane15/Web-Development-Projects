@@ -9,16 +9,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 
 
 @Entity
 @Table(name="favourites")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class Favourite {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)

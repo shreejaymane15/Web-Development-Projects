@@ -17,11 +17,11 @@ public class BlogServiceImpl implements BlogService{
 	@Autowired
 	private BlogDao bdao;
 	
-	@Autowired
-	private ModelMapper mapper;
+//	@Autowired
+//	private ModelMapper mapper;
 	
-	@Autowired
-	private UserDao udao;
+//	@Autowired
+//	private UserDao udao;
 	
 	@Override
 	public String saveBlog(BlogDto blog){

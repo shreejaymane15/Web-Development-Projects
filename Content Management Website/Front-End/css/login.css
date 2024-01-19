@@ -144,3 +144,30 @@ body{
 }
 
 
+#toast{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+
+.show{
+    display: block;
+    animation: fadeInOut 3s ease-out;
+}
+
+
+@keyframes fadeInOut{
+    0%, 100%{
+        opacity: 0;
+    }
+    25%, 75%{
+        opacity: 1;
+    }
+}
+

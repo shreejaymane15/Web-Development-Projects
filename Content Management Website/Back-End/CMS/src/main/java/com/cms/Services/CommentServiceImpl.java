@@ -24,8 +24,8 @@ public class CommentServiceImpl implements CommentService{
 	@Autowired
 	private UserDao udao;
 	
-	@Autowired	
-	private ModelMapper mapper;
+//	@Autowired
+//	private ModelMapper mapper;
 	
 	@Override
 	public String addComment(CommentDto comment) {
@@ -36,11 +36,11 @@ public class CommentServiceImpl implements CommentService{
 		
 		if(blog != null && user != null) {					
 			try {
-				Comment mappedComment = mapper.map(comment, Comment.class);
-				mappedComment.setBlog(blog);
-				mappedComment.setUser(user);
-				
-				cdao.save(mappedComment);
+//				Comment mappedComment = mapper.map(comment, Comment.class);
+//				mappedComment.setBlog(blog);
+//				mappedComment.setUser(user);
+//				
+//				cdao.save(mappedComment);
 				return "Comment Added";
 			
 			}catch(Exception e){

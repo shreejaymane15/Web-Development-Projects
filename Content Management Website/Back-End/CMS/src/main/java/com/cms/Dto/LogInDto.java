@@ -1,15 +1,43 @@
 package com.cms.Dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter @Setter 
-@NoArgsConstructor @AllArgsConstructor
 public class LogInDto {
 	
 	private String email;
 	private String password;
+	
+	
+	
 
+	
+	public LogInDto() {
+		super();
+	}
+
+
+	public LogInDto(String email, String password) {
+		super();
+		this.email = email;
+		this.password = password;
+	}
+	
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+		
+	
+	
+	@Override
+	public String toString() {
+		return "LogInDto [email=" + email + ", password=" + password + "]";
+	}
+
+	
+	
+	
 }
