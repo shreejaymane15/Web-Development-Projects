@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../public/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    gap: 1.5rem;
+}
+
+.email-box, .password-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+label, .button-box a, h1{
+    font-family: Montserrat, sans-serif;
+}
+
+input{
+    width: 40vh;
+    height: 1.5rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+
+.button-box a{
+    border: solid 1px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s; 
+}
+
+.button-box a:hover{
+    transform: scale(0.8);
+    background: purple;
+    color: white;
+}
+
+.error-dialog{
+    margin: 0;
+    padding: 0;
+    color: #ff0000; /* Red text color */
+}
+
+
+.is-invalid{
+    border:solid 1px #ff0000;
+}
+
+i{
+    position: absolute;
+    align-self: end;
+    margin-top: 2rem;
+    margin-right: 3px;
+    color: red;
+}

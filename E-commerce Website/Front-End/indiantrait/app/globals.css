@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Moirai-One';
+  src: url('/indiantrait/public/assets/fonts/MoiraiOne-Regular.ttf') format('truetype');
+  /* Add other font formats if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+  margin: 0;
+}

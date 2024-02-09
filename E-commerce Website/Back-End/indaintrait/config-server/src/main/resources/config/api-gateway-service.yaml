@@ -1,0 +1,99 @@
+server:
+  port: 8060
+
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoint:
+    gateway:
+      enabled:
+  endpoints:
+    web: 
+      exposure:
+        include: gateway
+       
+      
+   
+     
+SECRET_KEY: 7oeNQbKl2+0dFmCypbpbFDdC8d0MsicDIeGolQG3mLyENY+aJCNsSKJpzFhfM79hOsfuIGcDLRslDCTNeQVT3w==
+EXP_TIMEOUT: 600000
+      
+
+spring:
+  application:
+    name: api-gateway-service
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/indiantrait
+    username: root
+    password: manager
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  
+  boot:
+    admin:
+      client:
+        instance:
+          management-base-url: http://localhost:8060
+          
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: ["http://localhost:3000","http://localhost:9000"]
+            allowedHeaders:
+              - "Origin"
+              - "Content-Type"
+              - "Accept"
+              - "Authorization"
+              - "Referer"
+            allowedMethods:
+              - POST
+              - GET
+              - OPTIONS
+      routes:
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/indiantrait/auth/**
+          filters:
+            - AuthenticationFilter
+            
+        - id: customer-service
+          uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/indiantrait/customer/**
+          filters:
+            - AuthenticationFilter
+            
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/indiantrait/order/**
+          filters:
+            - AuthenticationFilter
+
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG

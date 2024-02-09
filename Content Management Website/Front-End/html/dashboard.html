@@ -13,36 +13,36 @@
 			<h3>Heart's Content</h3>
 			<hr>
 			<nav>
-			<ul>
-				<li>
+			<ul id="mylist">
+				<li onclick="toggleTabs()" id="list1" class="highlight">
 					<i class="fa-solid fa-house"></i>
-					<a href="#">Home</a>
+					<a>Home</a>
 				</li>
-				<li>
+				<li onclick="toggleTabs()" id="list2">
 					<i class="fa-solid fa-bell"></i>
 					<a href="#">Notification</a>
 				</li>
-				<li>
+				<li onclick="toggleTabs()" id="list3">
 					<i class="fa-solid fa-star"></i>
 					<a href="#">Popular</a>
 				</li>
-				<li>
+				<li onclick="toggleTabs()" id="list4">
 					<i class="fa-solid fa-bookmark"></i>
 					<a href="#">Archive</a>
 				</li>
-				<li>
+				<li onclick="toggleTabs()" id="list5">
 					<i class="fa-solid fa-square-pen"></i>
 					<a href="#">Blog</a>
 				</li>
-				<li>
+				<li onclick="toggleTabs()" id="list6">
 					<i class="fa-solid fa-phone"></i>
 					<a href="#">Contact</a>
 				</li>
-				<li>
+				<li onclick="toggleTabs()" id="list7">
 					<i class="fa-solid fa-circle-exclamation"></i>
 					<a href="#">About</a>
 				</li>
-				<li>
+				<li onclick="toggleTabs()" id="list8">
 					<i class="fa-solid fa-gears"></i>
 					<a href="#">Settings</a>
 				</li>
@@ -50,17 +50,27 @@
 			</nav>
 		</header>
 	</div>
-	<div class="top-content">
-		<div class="search">
-			<input type="text" name="search" placeholder="Search...">
-			<div class="search-icon">
-				<i class="fa-solid fa-magnifying-glass"></i>		
+	<div class="navbar">
+		<div class="top-content">
+			<div class="search">
+				<input type="text" name="search" placeholder="Search...">
+				<div class="search-icon">
+					<i class="fa-solid fa-magnifying-glass"></i>		
+				</div>
 			</div>
+			<div class="user_image" onclick="profileDropDown()">
+			<img src="../assets/images/Shreejay.jpg" align="right" id="profile-img"/>
+			<!-- <p id="username">Shreejay Mane</p>	 -->
 		</div>
-		<div class="user_image">
-			<img src="../assets/images/Shreejay.jpg" align="right"/>
-			<h4 id="username">Shreejay Mane</h4>
+	</div>
+	
+	<div class="profile-dropdown">
+		<div class="profile-content" id="profile-content">
+			<a href="#">View Profile</a>
+			<a href="login.html" id="logoutBtn">Logout</a>
 		</div>
+	</div>
+		<hr style="width: 500vh;margin-bottom: 0px;">
 	</div>
 	<div class="body">
 		<main>

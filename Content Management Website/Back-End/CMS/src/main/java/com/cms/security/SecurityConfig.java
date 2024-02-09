@@ -37,7 +37,7 @@ public class SecurityConfig {
             .and()
 			.csrf().disable()
 			.authorizeRequests()
-			.antMatchers("/", "/cms/user/register", "/cms/user/login").permitAll()
+			.antMatchers("/", "/cms/user/register", "/cms/auth/login").permitAll()
 			.antMatchers("/auth/test", "/blog/add").hasRole("USER")
 			.anyRequest().authenticated()
 			.and().sessionManagement()

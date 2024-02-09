@@ -7,7 +7,7 @@ public interface UserService {
 	
 	public ResponseDto registerUser(User user);
 	
-	public ResponseDto loginUser(User user);
+//	public ResponseDto loginUser(User user);
 	
 	public User findbyEmail(User user);
 

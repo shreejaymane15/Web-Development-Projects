@@ -1,0 +1,32 @@
+.about-header{
+    margin: 0;
+    background-color: plum;
+    padding: 1rem;
+}
+
+.about-header h1{
+    text-align: center;
+}
+
+.about-body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 77vh;
+}
+
+.about-owner{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-owner img{
+    aspect-ratio: 1/1;
+    max-width: 250px;
+    object-fit:cover;
+}
+
+.about-owner label{
+    text-align: center;
+}

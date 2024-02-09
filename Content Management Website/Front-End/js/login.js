@@ -52,7 +52,7 @@ const login = () => {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     const body = JSON.stringify({email, password});
-    const url = createUrl('/user/login');
+    const url = createUrl('/auth/login');
     
     const xhr = new XMLHttpRequest();
     if(email != "" && password != ""){
@@ -65,11 +65,12 @@ const login = () => {
                 // var response = this.responseText;
                 log(response);
                 if(response.status===200){
+                    debugger;
                     showToast("success", response.message);
                     localStorage.setItem("token", response.token);
                     localStorage.setItem("user_id", response.user_id);
                     setTimeout(function() {
-                        window.location.href = 'dashboard.html';
+                        window.location.href = "../html/dashboard.html";
                     }, 3000);
                 }else if(response.status === 500){
                     showToast("error", response.message);

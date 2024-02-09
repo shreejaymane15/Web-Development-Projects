@@ -1,0 +1,52 @@
+server:
+  port: 9000
+  
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/indiantrait?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: manager
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto : update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: indiantrait@gmail.com
+    password: zgfelnhtbbckxyxa
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  application:
+    name: auth-service      
+  boot:
+    admin:
+       client:
+         instance:
+           management-base-url: http://localhost:9000     
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  
+
+eureka:
+  client:
+    serviceUrl:
+      deaultZone: http://localhost:8761:/eureka/
+  instance:
+    prefer-ip-address: true    
+
+SECRET_KEY: 7oeNQbKl2+0dFmCypbpbFDdC8d0MsicDIeGolQG3mLyENY+aJCNsSKJpzFhfM79hOsfuIGcDLRslDCTNeQVT3w==
+EXP_TIMEOUT: 600000
+      

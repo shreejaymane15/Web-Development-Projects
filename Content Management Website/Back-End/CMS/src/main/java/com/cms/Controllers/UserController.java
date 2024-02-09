@@ -28,12 +28,12 @@ public class UserController {
 	}
 	
 	
-	@PostMapping("/user/login")
-	public ResponseDto checkUser(@RequestBody User user) {
-		
-		return userService.loginUser(user);
-	 
-	}
+//	@PostMapping("/user/login")
+//	public ResponseDto checkUser(@RequestBody User user) {
+//		
+//		return userService.loginUser(user);
+//	 
+//	}
 	
 	@PostMapping("/user/test")
 	public String testUser(@RequestBody String str) {

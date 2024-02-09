@@ -1,0 +1,22 @@
+.signupcomplete-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+
+.signupcomplete-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: violet;
+}
+
+.signupcomplete-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
