@@ -31,7 +31,7 @@ public class RegistrationCompleteEventListner implements
 		authService.saveVerificationTokenForUser(token, user);
 		//Send email to user
 		String url = event.getApplicationUrl() 
-							+ "/indiantrait/customer/verifyRegistration?token="
+							+ "/indiantrait/auth/verifyRegistration?token="
 							+ token;
 		String subject = "IndianTrait - Verify Your Email";
 		String message = "Dear IndianTrait community member,\n"

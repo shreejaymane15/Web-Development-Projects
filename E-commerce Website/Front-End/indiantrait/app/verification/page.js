@@ -26,7 +26,7 @@ export default function Verification({searchParams}) {
       if (params && params.token) {
         debugger;
         const token = params.token;    
-        let url = createUrl(`/auth/emailVerifiaction?token=${token}`);
+        let url = createUrl(`/auth/emailVerification?token=${token}`);
         const response = await verificationService(url);
         console.log(response);
         if (response.status === 200) {

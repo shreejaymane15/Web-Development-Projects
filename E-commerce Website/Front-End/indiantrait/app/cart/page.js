@@ -6,6 +6,9 @@ export default function Cart(){
         <>
         <div>
             <Navbar></Navbar>
+            <div>
+                <h1>MY CART</h1>
+            </div>
         </div>
         </>
     );

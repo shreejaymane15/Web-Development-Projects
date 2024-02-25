@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "@/lib/features/auth-slice";
 import { loginService } from "../../services/loginService";
 import { UserContext } from "@/context/context";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 export default function Login(){
@@ -58,7 +60,6 @@ export default function Login(){
                 "password" : password
             }
             let url = createUrl("/auth/login");
-            // let url = "http://localhost:9000/";
             var response = await loginService(url, body);
             if(response.status == 200){
                 debugger;
@@ -70,9 +71,13 @@ export default function Login(){
                     isAuthenticated:  true
                 });
                 console.log(user);
+                toast.success(response.message);
                 router.push('/home');
             }else if(response.status == 500 || response.status == 501){
-                console.log("success: " + response.data.message);
+                toast.error(response.message);
+                console.log("success: " + response.message);
+            }else{
+                toast.error(response);
             }
         }
     }

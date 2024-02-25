@@ -20,39 +20,39 @@ export default function Navbar(){
     }, [])
 
     const home = () => {
-        router.push("./home");
+        router.push("http://localhost:3000/home");
     }
 
     const collection = () => {
-        router.push("./collection");
+        router.push("http://localhost:3000/collection");
     }
 
     const offer = () => {
-        router.push("./offer");
+        router.push("http://localhost:3000/offer");
     }
 
     const aboutUs = () => {
-        router.push("./about");
+        router.push("http://localhost:3000/about");
     }
 
     const contactUs = () => {
-        router.push("./contact");
+        router.push("http://localhost:3000/contact");
     }
 
     const wishlist = () => {
-        router.push("./wishlist");
+        router.push("http://localhost:3000/wishlist");
     }
 
     const cart = () => {
-        router.push("./cart");
+        router.push("http://localhost:3000/cart");
     }
     
     const login = () => {
-        router.push("./login");
+        router.push("http://localhost:3000/login");
     }
 
     const signUp = () => {
-        router.push("./signup");
+        router.push("http://localhost:3000/signup");
     }
 
     const logout = () => {
@@ -64,7 +64,7 @@ export default function Navbar(){
             token: "",
             isAuthenticated: false
         })
-        router.push("./login");
+        router.push("http://localhost:3000/login");
     }
 
 

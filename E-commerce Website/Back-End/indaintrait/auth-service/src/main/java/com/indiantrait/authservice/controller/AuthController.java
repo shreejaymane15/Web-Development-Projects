@@ -44,20 +44,21 @@ public class AuthController {
 		try {
 			User authorizedUser = userRepo.findByEmail(user.getEmail()).orElse(null);
 	
-			UsernamePasswordAuthenticationToken unAuthorizedUser
-										= new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword());
-			
-			Authentication authentication =  authenticationManager.authenticate(unAuthorizedUser);
 				
 			if(authorizedUser == null ) {
 				return new ResponseDto("Email id not registered", 501, -1L, null);
 				
 			}else {
 				
+				UsernamePasswordAuthenticationToken unAuthorizedUser
+				= new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword());
+				
+				Authentication authentication =  authenticationManager.authenticate(unAuthorizedUser);
+				
 				String jwtToken = jwtUtil.generateJwtToken(authentication);
 				System.out.println("JWT TOKEN: " + jwtToken);
 				
-				return new ResponseDto("User authentication success!!!", 200, authorizedUser.getId(), jwtToken);
+				return new ResponseDto("Login Successfull", 200, authorizedUser.getId(), jwtToken);
 			}
 		}catch(Exception e) {
 			System.out.println(e);
@@ -70,8 +71,8 @@ public class AuthController {
 		return new RedirectView("http://localhost:3000/verification?token=" + token);
 	}	
 	
-	@GetMapping("/emailVerifiaction")
-	public  ResponseDto emailVerification(@RequestParam String token) {
+	@GetMapping("/emailVerification")
+	public ResponseDto emailVerification(@RequestParam String token) {
 			return authService.validateVerificationToken(token);
 	}	
 	

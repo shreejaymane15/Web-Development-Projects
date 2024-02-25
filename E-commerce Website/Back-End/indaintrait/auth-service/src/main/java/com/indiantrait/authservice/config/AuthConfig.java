@@ -14,9 +14,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import io.jsonwebtoken.security.MacAlgorithm;
 
 @Configuration
 public class AuthConfig{
@@ -26,7 +24,7 @@ public class AuthConfig{
 			"/indiantrait/auth/register", 
 			"/indiantrait/auth/login", 
 			"/indiantrait/auth/verifyRegistration", 
-			"/indiantrait/auth/emailVerifiaction",
+			"/indiantrait/auth/emailVerification",
 			"/indiantrait/auth/hello"
 	};
 

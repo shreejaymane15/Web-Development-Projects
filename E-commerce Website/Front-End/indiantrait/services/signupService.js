@@ -5,12 +5,16 @@ import axios from "axios";
 
 export async function signUpService(url, body){
     debugger;
-    const response =  await axios.post(url, body);
-    if(response != null){
-        return response.data;
-    }else{
-        return "Internal Server Error";
-    }
+    try{
+        const response =  await axios.post(url, body);
+        if(response != null){
+            return response.data;
+        }else{
+            return "Internal Server Error";
+        }
+    }catch{
+        return 'Network error';
+    }   
 }
 
 

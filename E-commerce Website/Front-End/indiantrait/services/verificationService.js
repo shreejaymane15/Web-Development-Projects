@@ -2,11 +2,10 @@
 import axios from "axios";
 
 
-
-export async function verificationService(url, body){
+export async function verificationService(url){
     debugger;
-    const response =  await axios.get(url);
-
+    const response = await axios.get(url);
+    
     if(response != null){
         return response.data;
     }else{

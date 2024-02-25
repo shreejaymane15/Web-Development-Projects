@@ -1,3 +1,157 @@
-.product-body{
-    grid-template-columns: repeat(1,2);
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../public/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.product-body{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-family: Montserrat, sans-serif;
+    overflow: hidden !important;
+}
+
+.product-body .product-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.product-body .product-image .main-image{
+    aspect-ratio: 1/1;
+    width: 80vh;
+    height: 85vh;
+    object-fit:cover;
+}
+
+.product-body .product-image-secondary{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0.5rem
+}
+
+.product-body .product-image-secondary img{
+    aspect-ratio: 1/1;
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+}
+
+.product-body .product-image-secondary img:hover{
+    transform: scale(1.2);
+}
+
+.product-body .product-data{
+    margin-left: 20%;
+    width: 70vh;
+}
+
+.product-body .product-data .product-title{
+    display: inline;    
+}
+
+.product-body .product-data .fav{
+    margin: 0.7rem;
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.product-body .product-data .fav-solid{
+    color: red;
+}
+
+
+.product-body .product-data .btn-primary{
+    padding: 1rem;
+    background-color: purple;
+    color: white;
+    width: 100%;
+    font-size: large;
+    transition: 0.3s;
+}
+
+
+.product-body .product-data .btn-primary:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.product-body .product-data div{
+    margin-top: 1.5rem;
+    
+}
+
+
+.product-body .product-data div h4{
+    display: inline;
+}
+
+.product-body .product-data div i{
+    float: right;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.product-body .product-data div .colorContainer{
+    display: flex;
+    flex-direction: row;
+    gap:  1rem;
+    margin: 0px;
+}
+
+.product-body .product-data div .colorContainer .color-btn{
+    padding: 0.7rem;
+    border: 'solid 1px';
+    border-radius: 50%;
+}
+
+.product-body .product-data div .colorContainer .color-btn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.product-body .product-data div .colorContainer .selected{
+    box-shadow: 0.2rem 0.1rem 0.2rem black;
+    transform: scale(1.2);
+}
+
+
+.product-body .product-data div .sizeContainer{
+    display: flex;
+    flex-direction: row;
+    gap:  1rem;
+    margin: 0px;
+}
+
+.product-body .product-data div .sizeContainer .btn-secondary{
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.product-body .product-data div .sizeContainer .btn-secondary:hover{
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+}
+
+.product-body .product-data div .sizeContainer .selected{
+    background-color: purple;
+    color: white;
+}
+

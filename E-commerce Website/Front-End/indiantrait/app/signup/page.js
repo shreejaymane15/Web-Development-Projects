@@ -3,8 +3,11 @@ import { useState } from 'react';
 import Navbar from '../navbar/page';
 import './signup.css';
 import { useRouter } from 'next/navigation';
-import { signUpService } from './signupService';
+import { signUpService } from '../../services/signupService';
 import createUrl from '../constant';
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function SignUp(){
    
@@ -112,15 +115,15 @@ export default function SignUp(){
             }
 
             const url = createUrl("/auth/register");
-
             const response = await signUpService(url, body);
             if(response.status == 200){
-                console.log("success: " + response.message);
-                setTimeout(function() {
-                    router.push('/signupcomplete');
-                }, 3000);    
+                toast.success(response.message);
+                router.push('/signupcomplete');
             }else if( response.status === 500 || response.status === 501){
                 console.log("error: "+response.message);
+                toast.error(response.message);
+            }else{
+                toast.error(response.message);
             }                
 
         }
