@@ -21,7 +21,7 @@ def createProfile(sender, instance, created, **kwargs):
         send_mail(
             subject,
             message,
-            settings.Email_HOST_USER,
+            settings.EMAIL_HOST_USER,
             [profile.email],
             fail_silently=False,
         )
@@ -42,8 +42,11 @@ def updateUser(sender, instance, created, **kwargs):
 
 # @receiver(post_delete, sender = Profile)
 def deleteUser(sender, instance, **kwargs):
-    user = instance.user
-    user.delete()
+    try:
+        user = instance.user
+        user.delete()
+    except:
+        pass
 
 
 

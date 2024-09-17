@@ -1,0 +1,25 @@
+Server:
+ port: 8080
+
+
+spring:
+ application:
+  name: ProductService
+ datasource:
+  url: jdbc:mysql://${DB_HOST:localhost}:3306/productdb?createIfNotExist
+  username: root
+  password: manager
+  driverClassName: com.mysql.cj.jdbc.Driver
+ jpa:
+  database-platform:
+  hibernate:
+   ddl-auto: update
+
+
+
+ 
+
+
+
+
+
