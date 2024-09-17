@@ -226,12 +226,3 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-AWS_QUERYSTRING_AUTH = False
-AWS_S3_FILE_OVERWRITE = False
-
-
-
-DEFAULT_FILE_STORAGE =  "storages.backends.s3.S3Storage"
-AWS_ACCESS_KEY_ID = "AKIAQAFZ336ZBW2HG3UZ"
-AWS_SECRET_ACCESS_KEY = "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"
-AWS_STORAGE_BUCKET_NAME  = "devsearch-bucket15"
